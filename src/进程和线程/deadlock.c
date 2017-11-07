@@ -48,8 +48,8 @@ void* thread_worker(void* p)
     int i; 
     for (i=0; i<LOOP_TIMES; i++)
     { 
-        pthread_mutex_lock(&mutex1);
         pthread_mutex_lock(&mutex2); 
+        pthread_mutex_lock(&mutex1);
         critical_section(2, i); 
         pthread_mutex_unlock(&mutex2);
         pthread_mutex_unlock(&mutex1);
