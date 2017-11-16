@@ -14,11 +14,7 @@
 int mem_size = DEFAULT_MEM_SIZE; /*内存大小*/  
 int ma_algorithm = MA_FF;           /*当前分配算法*/  
 static int pid = 0;                                      /*初始pid*/  
-int flag = 0;                             /*设置内存大小标志*/  
-  
-  
-  
-  
+int flag = 0;                             /*设置内存大小标志*/
 /*描述每一个空闲块的数据结构*/  
 struct free_block_type {  
     int size;  
@@ -115,9 +111,7 @@ void rearrange_BF()
                 }  
                 m = m->next;  
                 p = m->next;  
-                q = p->next;  
-  
-  
+                q = p->next;
             }  
             n = p;  
         }  
@@ -551,7 +545,5 @@ int main(void)
         case '0': do_exit(); exit(0);   //释放链表并退出  
         default: break;  
         }  
-    }  
-    return 0;  
+    }
 }  
-
